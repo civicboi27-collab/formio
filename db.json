@@ -1,0 +1,1859 @@
+{
+  "forms": [
+    {
+      "id": "f001",
+      "title": "แบบสอบถามความพึงพอใจการให้บริการ",
+      "description": "ประเมินความพึงพอใจในการให้บริการขององค์กร เพื่อนำไปปรับปรุงและพัฒนาต่อไป",
+      "schema": {
+        "display": "form",
+        "components": [
+          {
+            "type": "htmlelement",
+            "key": "html1",
+            "tag": "h5",
+            "content": "<h5 style='color:#6c47ff'>ข้อมูลผู้ตอบแบบสอบถาม</h5>",
+            "input": false
+          },
+          {
+            "type": "textfield",
+            "key": "fullName",
+            "label": "ชื่อ-นามสกุล",
+            "placeholder": "กรุณากรอกชื่อ-นามสกุล",
+            "input": true,
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "radio",
+            "key": "gender",
+            "label": "เพศ",
+            "input": true,
+            "values": [
+              {
+                "label": "ชาย",
+                "value": "male"
+              },
+              {
+                "label": "หญิง",
+                "value": "female"
+              },
+              {
+                "label": "ไม่ระบุ",
+                "value": "other"
+              }
+            ],
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "number",
+            "key": "age",
+            "label": "อายุ (ปี)",
+            "input": true,
+            "validate": {
+              "required": true,
+              "min": 1,
+              "max": 120
+            }
+          },
+          {
+            "type": "select",
+            "key": "channel",
+            "label": "ช่องทางที่ใช้บริการ",
+            "input": true,
+            "data": {
+              "values": [
+                {
+                  "label": "สาขา/หน้าร้าน",
+                  "value": "branch"
+                },
+                {
+                  "label": "เว็บไซต์",
+                  "value": "website"
+                },
+                {
+                  "label": "แอปพลิเคชัน",
+                  "value": "app"
+                },
+                {
+                  "label": "โทรศัพท์",
+                  "value": "phone"
+                },
+                {
+                  "label": "Line Official",
+                  "value": "line"
+                }
+              ]
+            },
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "htmlelement",
+            "key": "html2",
+            "tag": "h5",
+            "content": "<h5 style='color:#6c47ff'>การประเมินความพึงพอใจ</h5>",
+            "input": false
+          },
+          {
+            "type": "survey",
+            "key": "satisfaction",
+            "label": "ประเมินความพึงพอใจในแต่ละด้าน",
+            "input": true,
+            "questions": [
+              {
+                "label": "ความสะดวกในการติดต่อ",
+                "value": "convenience"
+              },
+              {
+                "label": "ความรวดเร็วในการให้บริการ",
+                "value": "speed"
+              },
+              {
+                "label": "ความสุภาพของเจ้าหน้าที่",
+                "value": "politeness"
+              },
+              {
+                "label": "ความถูกต้องของข้อมูล",
+                "value": "accuracy"
+              },
+              {
+                "label": "ความพึงพอใจโดยรวม",
+                "value": "overall"
+              }
+            ],
+            "values": [
+              {
+                "label": "ดีมาก",
+                "value": "5"
+              },
+              {
+                "label": "ดี",
+                "value": "4"
+              },
+              {
+                "label": "ปานกลาง",
+                "value": "3"
+              },
+              {
+                "label": "พอใช้",
+                "value": "2"
+              },
+              {
+                "label": "ควรปรับปรุง",
+                "value": "1"
+              }
+            ]
+          },
+          {
+            "type": "radio",
+            "key": "recommend",
+            "label": "ท่านจะแนะนำบริการของเราให้ผู้อื่นหรือไม่?",
+            "input": true,
+            "values": [
+              {
+                "label": "แน่นอน",
+                "value": "definitely"
+              },
+              {
+                "label": "น่าจะแนะนำ",
+                "value": "probably"
+              },
+              {
+                "label": "ไม่แน่ใจ",
+                "value": "unsure"
+              },
+              {
+                "label": "ไม่แนะนำ",
+                "value": "no"
+              }
+            ]
+          },
+          {
+            "type": "textarea",
+            "key": "suggestion",
+            "label": "ข้อเสนอแนะ / ความคิดเห็นเพิ่มเติม",
+            "rows": 4,
+            "input": true
+          },
+          {
+            "type": "button",
+            "key": "submit",
+            "label": "ส่งแบบสอบถาม",
+            "input": true,
+            "action": "submit"
+          }
+        ]
+      },
+      "createdAt": "2026-03-01T08:00:00.000Z",
+      "updatedAt": "2026-03-01T08:00:00.000Z"
+    },
+    {
+      "id": "f002",
+      "title": "แบบสอบถามพฤติกรรมการใช้โซเชียลมีเดีย",
+      "description": "สำรวจพฤติกรรมและรูปแบบการใช้โซเชียลมีเดียของประชาชน",
+      "schema": {
+        "display": "form",
+        "components": [
+          {
+            "type": "radio",
+            "key": "ageGroup",
+            "label": "ช่วงอายุของท่าน",
+            "input": true,
+            "values": [
+              {
+                "label": "ต่ำกว่า 18 ปี",
+                "value": "under18"
+              },
+              {
+                "label": "18 – 25 ปี",
+                "value": "18-25"
+              },
+              {
+                "label": "26 – 35 ปี",
+                "value": "26-35"
+              },
+              {
+                "label": "36 – 45 ปี",
+                "value": "36-45"
+              },
+              {
+                "label": "46 ปีขึ้นไป",
+                "value": "46plus"
+              }
+            ],
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "selectboxes",
+            "key": "platforms",
+            "label": "โซเชียลมีเดียที่ท่านใช้ (เลือกได้หลายข้อ)",
+            "input": true,
+            "inputType": "checkbox",
+            "values": [
+              {
+                "label": "Facebook",
+                "value": "facebook"
+              },
+              {
+                "label": "Instagram",
+                "value": "instagram"
+              },
+              {
+                "label": "TikTok",
+                "value": "tiktok"
+              },
+              {
+                "label": "X (Twitter)",
+                "value": "twitter"
+              },
+              {
+                "label": "YouTube",
+                "value": "youtube"
+              },
+              {
+                "label": "Line",
+                "value": "line"
+              }
+            ]
+          },
+          {
+            "type": "radio",
+            "key": "dailyHours",
+            "label": "ใช้โซเชียลมีเดียเฉลี่ยวันละกี่ชั่วโมง?",
+            "input": true,
+            "values": [
+              {
+                "label": "น้อยกว่า 1 ชั่วโมง",
+                "value": "lt1"
+              },
+              {
+                "label": "1 – 2 ชั่วโมง",
+                "value": "1-2"
+              },
+              {
+                "label": "3 – 4 ชั่วโมง",
+                "value": "3-4"
+              },
+              {
+                "label": "5 ชั่วโมงขึ้นไป",
+                "value": "5plus"
+              }
+            ],
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "selectboxes",
+            "key": "purposes",
+            "label": "วัตถุประสงค์หลักในการใช้ (เลือกได้หลายข้อ)",
+            "input": true,
+            "inputType": "checkbox",
+            "values": [
+              {
+                "label": "ติดตามข่าวสาร",
+                "value": "news"
+              },
+              {
+                "label": "ความบันเทิง",
+                "value": "entertainment"
+              },
+              {
+                "label": "ติดต่อเพื่อนและครอบครัว",
+                "value": "social"
+              },
+              {
+                "label": "ธุรกิจ/การตลาด",
+                "value": "business"
+              },
+              {
+                "label": "การศึกษา",
+                "value": "education"
+              },
+              {
+                "label": "ช้อปปิ้งออนไลน์",
+                "value": "shopping"
+              }
+            ]
+          },
+          {
+            "type": "survey",
+            "key": "impact",
+            "label": "ผลกระทบจากการใช้โซเชียลมีเดียต่อชีวิตของท่าน",
+            "input": true,
+            "questions": [
+              {
+                "label": "ส่งผลดีต่อสุขภาพจิต",
+                "value": "mental"
+              },
+              {
+                "label": "ช่วยให้ได้รับข้อมูลที่เป็นประโยชน์",
+                "value": "info"
+              },
+              {
+                "label": "ทำให้เสียเวลามากเกินไป",
+                "value": "timeWaste"
+              },
+              {
+                "label": "ส่งผลต่อความสัมพันธ์กับคนรอบข้าง",
+                "value": "relationship"
+              }
+            ],
+            "values": [
+              {
+                "label": "เห็นด้วยอย่างยิ่ง",
+                "value": "5"
+              },
+              {
+                "label": "เห็นด้วย",
+                "value": "4"
+              },
+              {
+                "label": "เฉย ๆ",
+                "value": "3"
+              },
+              {
+                "label": "ไม่เห็นด้วย",
+                "value": "2"
+              },
+              {
+                "label": "ไม่เห็นด้วยอย่างยิ่ง",
+                "value": "1"
+              }
+            ]
+          },
+          {
+            "type": "textarea",
+            "key": "comment",
+            "label": "ความคิดเห็นเพิ่มเติม",
+            "rows": 3,
+            "input": true
+          },
+          {
+            "type": "button",
+            "key": "submit",
+            "label": "ส่งแบบสอบถาม",
+            "input": true,
+            "action": "submit"
+          }
+        ]
+      },
+      "createdAt": "2026-03-01T09:00:00.000Z",
+      "updatedAt": "2026-03-01T09:00:00.000Z"
+    },
+    {
+      "id": "f003",
+      "title": "แบบประเมินการอบรม / สัมมนา",
+      "description": "ประเมินคุณภาพการอบรมและสัมมนา เพื่อพัฒนาหลักสูตรให้มีประสิทธิภาพยิ่งขึ้น",
+      "schema": {
+        "display": "form",
+        "components": [
+          {
+            "type": "textfield",
+            "key": "participantName",
+            "label": "ชื่อผู้เข้าร่วม",
+            "input": true,
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "textfield",
+            "key": "trainingTopic",
+            "label": "หัวข้อการอบรม",
+            "input": true,
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "select",
+            "key": "department",
+            "label": "หน่วยงาน / แผนก",
+            "input": true,
+            "data": {
+              "values": [
+                {
+                  "label": "ฝ่ายบุคคล",
+                  "value": "hr"
+                },
+                {
+                  "label": "ฝ่ายไอที",
+                  "value": "it"
+                },
+                {
+                  "label": "ฝ่ายการตลาด",
+                  "value": "marketing"
+                },
+                {
+                  "label": "ฝ่ายการเงิน",
+                  "value": "finance"
+                },
+                {
+                  "label": "ฝ่ายปฏิบัติการ",
+                  "value": "operation"
+                },
+                {
+                  "label": "อื่นๆ",
+                  "value": "other"
+                }
+              ]
+            }
+          },
+          {
+            "type": "survey",
+            "key": "trainingEval",
+            "label": "การประเมินคุณภาพการอบรม",
+            "input": true,
+            "questions": [
+              {
+                "label": "เนื้อหาตรงกับความต้องการ",
+                "value": "relevance"
+              },
+              {
+                "label": "ความชัดเจนของการนำเสนอ",
+                "value": "clarity"
+              },
+              {
+                "label": "ความสามารถของวิทยากร",
+                "value": "trainer"
+              },
+              {
+                "label": "ระยะเวลาของการอบรมเหมาะสม",
+                "value": "duration"
+              },
+              {
+                "label": "สื่อ/อุปกรณ์ที่ใช้ประกอบการอบรม",
+                "value": "materials"
+              },
+              {
+                "label": "สถานที่จัดการอบรม",
+                "value": "venue"
+              }
+            ],
+            "values": [
+              {
+                "label": "ดีเยี่ยม",
+                "value": "5"
+              },
+              {
+                "label": "ดี",
+                "value": "4"
+              },
+              {
+                "label": "ปานกลาง",
+                "value": "3"
+              },
+              {
+                "label": "พอใช้",
+                "value": "2"
+              },
+              {
+                "label": "ควรปรับปรุง",
+                "value": "1"
+              }
+            ]
+          },
+          {
+            "type": "radio",
+            "key": "overallRating",
+            "label": "ความพึงพอใจโดยรวม",
+            "input": true,
+            "values": [
+              {
+                "label": "⭐⭐⭐⭐⭐ ดีเยี่ยม",
+                "value": "5"
+              },
+              {
+                "label": "⭐⭐⭐⭐ ดี",
+                "value": "4"
+              },
+              {
+                "label": "⭐⭐⭐ ปานกลาง",
+                "value": "3"
+              },
+              {
+                "label": "⭐⭐ พอใช้",
+                "value": "2"
+              },
+              {
+                "label": "⭐ ควรปรับปรุง",
+                "value": "1"
+              }
+            ],
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "textarea",
+            "key": "knowledge",
+            "label": "สิ่งที่ได้รับจากการอบรม / ความรู้ที่นำไปใช้ได้",
+            "rows": 3,
+            "input": true
+          },
+          {
+            "type": "textarea",
+            "key": "improvement",
+            "label": "ข้อเสนอแนะในการปรับปรุง",
+            "rows": 3,
+            "input": true
+          },
+          {
+            "type": "button",
+            "key": "submit",
+            "label": "ส่งแบบประเมิน",
+            "input": true,
+            "action": "submit"
+          }
+        ]
+      },
+      "createdAt": "2026-03-01T10:00:00.000Z",
+      "updatedAt": "2026-03-01T10:00:00.000Z"
+    },
+    {
+      "id": "f004",
+      "title": "แบบสอบถามพฤติกรรมสุขภาพ",
+      "description": "สำรวจพฤติกรรมและทัศนคติด้านสุขภาพของประชาชน",
+      "schema": {
+        "display": "form",
+        "components": [
+          {
+            "type": "number",
+            "key": "age",
+            "label": "อายุ (ปี)",
+            "input": true,
+            "validate": {
+              "required": true,
+              "min": 1,
+              "max": 120
+            }
+          },
+          {
+            "type": "radio",
+            "key": "gender",
+            "label": "เพศ",
+            "input": true,
+            "values": [
+              {
+                "label": "ชาย",
+                "value": "male"
+              },
+              {
+                "label": "หญิง",
+                "value": "female"
+              },
+              {
+                "label": "ไม่ระบุ",
+                "value": "other"
+              }
+            ]
+          },
+          {
+            "type": "number",
+            "key": "weight",
+            "label": "น้ำหนัก (กิโลกรัม)",
+            "input": true
+          },
+          {
+            "type": "number",
+            "key": "height",
+            "label": "ส่วนสูง (เซนติเมตร)",
+            "input": true
+          },
+          {
+            "type": "selectboxes",
+            "key": "chronicDiseases",
+            "label": "โรคประจำตัว (เลือกได้หลายข้อ)",
+            "input": true,
+            "inputType": "checkbox",
+            "values": [
+              {
+                "label": "ไม่มีโรคประจำตัว",
+                "value": "none"
+              },
+              {
+                "label": "เบาหวาน",
+                "value": "diabetes"
+              },
+              {
+                "label": "ความดันโลหิตสูง",
+                "value": "hypertension"
+              },
+              {
+                "label": "โรคหัวใจ",
+                "value": "heart"
+              },
+              {
+                "label": "ภูมิแพ้",
+                "value": "allergy"
+              },
+              {
+                "label": "อื่นๆ",
+                "value": "other"
+              }
+            ]
+          },
+          {
+            "type": "radio",
+            "key": "exercise",
+            "label": "ออกกำลังกายสัปดาห์ละกี่ครั้ง?",
+            "input": true,
+            "values": [
+              {
+                "label": "ไม่ออกเลย",
+                "value": "never"
+              },
+              {
+                "label": "1 – 2 ครั้ง",
+                "value": "1-2"
+              },
+              {
+                "label": "3 – 4 ครั้ง",
+                "value": "3-4"
+              },
+              {
+                "label": "5 ครั้งขึ้นไป",
+                "value": "5plus"
+              }
+            ],
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "radio",
+            "key": "sleepHours",
+            "label": "นอนหลับเฉลี่ยกี่ชั่วโมงต่อคืน?",
+            "input": true,
+            "values": [
+              {
+                "label": "น้อยกว่า 5 ชั่วโมง",
+                "value": "lt5"
+              },
+              {
+                "label": "5 – 6 ชั่วโมง",
+                "value": "5-6"
+              },
+              {
+                "label": "7 – 8 ชั่วโมง",
+                "value": "7-8"
+              },
+              {
+                "label": "มากกว่า 8 ชั่วโมง",
+                "value": "gt8"
+              }
+            ]
+          },
+          {
+            "type": "radio",
+            "key": "smoking",
+            "label": "สูบบุหรี่หรือไม่?",
+            "input": true,
+            "values": [
+              {
+                "label": "ไม่สูบ",
+                "value": "never"
+              },
+              {
+                "label": "เคยสูบ ปัจจุบันเลิกแล้ว",
+                "value": "quit"
+              },
+              {
+                "label": "สูบเป็นครั้งคราว",
+                "value": "occasional"
+              },
+              {
+                "label": "สูบทุกวัน",
+                "value": "daily"
+              }
+            ]
+          },
+          {
+            "type": "radio",
+            "key": "stressLevel",
+            "label": "ระดับความเครียดในชีวิตประจำวัน",
+            "input": true,
+            "values": [
+              {
+                "label": "น้อยมาก",
+                "value": "1"
+              },
+              {
+                "label": "น้อย",
+                "value": "2"
+              },
+              {
+                "label": "ปานกลาง",
+                "value": "3"
+              },
+              {
+                "label": "มาก",
+                "value": "4"
+              },
+              {
+                "label": "มากที่สุด",
+                "value": "5"
+              }
+            ]
+          },
+          {
+            "type": "button",
+            "key": "submit",
+            "label": "ส่งแบบสอบถาม",
+            "input": true,
+            "action": "submit"
+          }
+        ]
+      },
+      "createdAt": "2026-03-01T11:00:00.000Z",
+      "updatedAt": "2026-03-01T11:00:00.000Z"
+    },
+    {
+      "id": "f005",
+      "title": "แบบสอบถามความต้องการพัฒนาบุคลากร",
+      "description": "รวบรวมความต้องการฝึกอบรมและพัฒนาทักษะของพนักงาน",
+      "schema": {
+        "display": "form",
+        "components": [
+          {
+            "type": "textfield",
+            "key": "employeeName",
+            "label": "ชื่อ-นามสกุล",
+            "input": true,
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "textfield",
+            "key": "position",
+            "label": "ตำแหน่งงาน",
+            "input": true,
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "select",
+            "key": "department",
+            "label": "ฝ่าย / แผนก",
+            "input": true,
+            "data": {
+              "values": [
+                {
+                  "label": "ฝ่ายบุคคล (HR)",
+                  "value": "hr"
+                },
+                {
+                  "label": "ฝ่ายเทคโนโลยีสารสนเทศ (IT)",
+                  "value": "it"
+                },
+                {
+                  "label": "ฝ่ายการตลาด",
+                  "value": "marketing"
+                },
+                {
+                  "label": "ฝ่ายการเงินและบัญชี",
+                  "value": "finance"
+                },
+                {
+                  "label": "ฝ่ายขาย",
+                  "value": "sales"
+                },
+                {
+                  "label": "ฝ่ายปฏิบัติการ",
+                  "value": "operation"
+                },
+                {
+                  "label": "อื่นๆ",
+                  "value": "other"
+                }
+              ]
+            }
+          },
+          {
+            "type": "selectboxes",
+            "key": "trainingNeeds",
+            "label": "ทักษะที่ต้องการพัฒนา (เลือกได้หลายข้อ)",
+            "input": true,
+            "inputType": "checkbox",
+            "values": [
+              {
+                "label": "ทักษะภาษาอังกฤษ",
+                "value": "english"
+              },
+              {
+                "label": "ทักษะด้านดิจิทัล / IT",
+                "value": "digital"
+              },
+              {
+                "label": "ทักษะการนำเสนอ",
+                "value": "presentation"
+              },
+              {
+                "label": "ทักษะการเจรจาต่อรอง",
+                "value": "negotiation"
+              },
+              {
+                "label": "ทักษะการบริหารโครงการ",
+                "value": "project"
+              },
+              {
+                "label": "ทักษะผู้นำ",
+                "value": "leadership"
+              },
+              {
+                "label": "การคิดเชิงสร้างสรรค์",
+                "value": "creative"
+              },
+              {
+                "label": "ทักษะการวิเคราะห์ข้อมูล",
+                "value": "data"
+              }
+            ]
+          },
+          {
+            "type": "radio",
+            "key": "preferredFormat",
+            "label": "รูปแบบการอบรมที่ต้องการ",
+            "input": true,
+            "values": [
+              {
+                "label": "Classroom (ห้องเรียน)",
+                "value": "classroom"
+              },
+              {
+                "label": "Online (ออนไลน์)",
+                "value": "online"
+              },
+              {
+                "label": "On-the-job Training",
+                "value": "ojt"
+              },
+              {
+                "label": "Workshop / กิจกรรมกลุ่ม",
+                "value": "workshop"
+              }
+            ]
+          },
+          {
+            "type": "radio",
+            "key": "preferredTime",
+            "label": "ช่วงเวลาที่สะดวกเข้ารับการอบรม",
+            "input": true,
+            "values": [
+              {
+                "label": "วันและเวลาทำการ",
+                "value": "workday"
+              },
+              {
+                "label": "วันเสาร์-อาทิตย์",
+                "value": "weekend"
+              },
+              {
+                "label": "ช่วงเย็นหลังเลิกงาน",
+                "value": "evening"
+              }
+            ]
+          },
+          {
+            "type": "textarea",
+            "key": "otherNeeds",
+            "label": "ความต้องการอื่นๆ ที่ต้องการให้จัดอบรม",
+            "rows": 3,
+            "input": true
+          },
+          {
+            "type": "button",
+            "key": "submit",
+            "label": "ส่งแบบสอบถาม",
+            "input": true,
+            "action": "submit"
+          }
+        ]
+      },
+      "createdAt": "2026-03-02T08:00:00.000Z",
+      "updatedAt": "2026-03-02T08:00:00.000Z"
+    },
+    {
+      "id": "f006",
+      "title": "แบบประเมินอาจารย์ผู้สอน",
+      "description": "ประเมินคุณภาพการสอนของอาจารย์ เพื่อพัฒนาการเรียนการสอนให้มีประสิทธิภาพ",
+      "schema": {
+        "display": "form",
+        "components": [
+          {
+            "type": "textfield",
+            "key": "subjectName",
+            "label": "ชื่อวิชา",
+            "input": true,
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "textfield",
+            "key": "subjectCode",
+            "label": "รหัสวิชา",
+            "input": true
+          },
+          {
+            "type": "select",
+            "key": "semester",
+            "label": "ภาคการศึกษา",
+            "input": true,
+            "data": {
+              "values": [
+                {
+                  "label": "ภาคต้น 2568",
+                  "value": "1-2568"
+                },
+                {
+                  "label": "ภาคปลาย 2568",
+                  "value": "2-2568"
+                },
+                {
+                  "label": "ภาคฤดูร้อน 2568",
+                  "value": "s-2568"
+                }
+              ]
+            }
+          },
+          {
+            "type": "survey",
+            "key": "teachingEval",
+            "label": "การประเมินด้านการสอน",
+            "input": true,
+            "questions": [
+              {
+                "label": "อาจารย์มีความรู้ความสามารถในวิชาที่สอน",
+                "value": "knowledge"
+              },
+              {
+                "label": "อาจารย์อธิบายเนื้อหาได้ชัดเจน เข้าใจง่าย",
+                "value": "clarity"
+              },
+              {
+                "label": "อาจารย์ยกตัวอย่างประกอบการสอนได้ดี",
+                "value": "examples"
+              },
+              {
+                "label": "อาจารย์เปิดโอกาสให้นักศึกษาถามคำถาม",
+                "value": "interaction"
+              },
+              {
+                "label": "อาจารย์ตรงต่อเวลา",
+                "value": "punctuality"
+              },
+              {
+                "label": "อาจารย์มีความยุติธรรมในการวัดผล",
+                "value": "fairness"
+              },
+              {
+                "label": "อาจารย์กระตุ้นให้นักศึกษาสนใจเรียน",
+                "value": "motivation"
+              }
+            ],
+            "values": [
+              {
+                "label": "ดีเยี่ยม (5)",
+                "value": "5"
+              },
+              {
+                "label": "ดี (4)",
+                "value": "4"
+              },
+              {
+                "label": "ปานกลาง (3)",
+                "value": "3"
+              },
+              {
+                "label": "พอใช้ (2)",
+                "value": "2"
+              },
+              {
+                "label": "ควรปรับปรุง (1)",
+                "value": "1"
+              }
+            ]
+          },
+          {
+            "type": "survey",
+            "key": "courseEval",
+            "label": "การประเมินด้านรายวิชา",
+            "input": true,
+            "questions": [
+              {
+                "label": "เนื้อหาวิชามีประโยชน์และสอดคล้องกับวิชาชีพ",
+                "value": "relevance"
+              },
+              {
+                "label": "การบ้าน/งานที่มอบหมายเหมาะสมกับเวลา",
+                "value": "assignments"
+              },
+              {
+                "label": "สื่อการสอน เช่น สไลด์ หนังสือ เหมาะสม",
+                "value": "materials"
+              }
+            ],
+            "values": [
+              {
+                "label": "ดีเยี่ยม (5)",
+                "value": "5"
+              },
+              {
+                "label": "ดี (4)",
+                "value": "4"
+              },
+              {
+                "label": "ปานกลาง (3)",
+                "value": "3"
+              },
+              {
+                "label": "พอใช้ (2)",
+                "value": "2"
+              },
+              {
+                "label": "ควรปรับปรุง (1)",
+                "value": "1"
+              }
+            ]
+          },
+          {
+            "type": "textarea",
+            "key": "goodPoints",
+            "label": "สิ่งที่ดีของการสอนในรายวิชานี้",
+            "rows": 3,
+            "input": true
+          },
+          {
+            "type": "textarea",
+            "key": "improvements",
+            "label": "ข้อเสนอแนะเพื่อการปรับปรุง",
+            "rows": 3,
+            "input": true
+          },
+          {
+            "type": "button",
+            "key": "submit",
+            "label": "ส่งแบบประเมิน",
+            "input": true,
+            "action": "submit"
+          }
+        ]
+      },
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z"
+    },
+    {
+      "id": "f007",
+      "title": "แบบสอบถามพฤติกรรมการท่องเที่ยวในประเทศไทย",
+      "description": "สำรวจรูปแบบและแนวโน้มการท่องเที่ยวภายในประเทศ",
+      "schema": {
+        "display": "form",
+        "components": [
+          {
+            "type": "radio",
+            "key": "travelFrequency",
+            "label": "ท่านเดินทางท่องเที่ยวในประเทศบ่อยแค่ไหน?",
+            "input": true,
+            "values": [
+              {
+                "label": "มากกว่า 4 ครั้งต่อปี",
+                "value": "4plus"
+              },
+              {
+                "label": "3 – 4 ครั้งต่อปี",
+                "value": "3-4"
+              },
+              {
+                "label": "1 – 2 ครั้งต่อปี",
+                "value": "1-2"
+              },
+              {
+                "label": "นานๆ ครั้ง",
+                "value": "rarely"
+              }
+            ],
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "selectboxes",
+            "key": "travelType",
+            "label": "รูปแบบการท่องเที่ยวที่นิยม (เลือกได้หลายข้อ)",
+            "input": true,
+            "inputType": "checkbox",
+            "values": [
+              {
+                "label": "ท่องเที่ยวกับครอบครัว",
+                "value": "family"
+              },
+              {
+                "label": "ท่องเที่ยวกับเพื่อน",
+                "value": "friends"
+              },
+              {
+                "label": "ท่องเที่ยวคนเดียว (Solo)",
+                "value": "solo"
+              },
+              {
+                "label": "ท่องเที่ยวกับคู่รัก",
+                "value": "couple"
+              },
+              {
+                "label": "ทริปกลุ่มทัวร์",
+                "value": "tour"
+              }
+            ]
+          },
+          {
+            "type": "selectboxes",
+            "key": "favoriteDestinations",
+            "label": "ภูมิภาคที่ชอบท่องเที่ยว (เลือกได้หลายข้อ)",
+            "input": true,
+            "inputType": "checkbox",
+            "values": [
+              {
+                "label": "ภาคเหนือ (เชียงใหม่ เชียงราย ฯลฯ)",
+                "value": "north"
+              },
+              {
+                "label": "ภาคกลาง (กรุงเทพฯ อยุธยา ฯลฯ)",
+                "value": "central"
+              },
+              {
+                "label": "ภาคตะวันออก (พัทยา เกาะช้าง ฯลฯ)",
+                "value": "east"
+              },
+              {
+                "label": "ภาคใต้ (ภูเก็ต กระบี่ เกาะสมุย ฯลฯ)",
+                "value": "south"
+              },
+              {
+                "label": "ภาคตะวันออกเฉียงเหนือ (อีสาน)",
+                "value": "northeast"
+              }
+            ]
+          },
+          {
+            "type": "radio",
+            "key": "budget",
+            "label": "งบประมาณต่อทริปโดยประมาณ (ไม่รวมเดินทาง)",
+            "input": true,
+            "values": [
+              {
+                "label": "น้อยกว่า 3,000 บาท",
+                "value": "lt3k"
+              },
+              {
+                "label": "3,000 – 7,000 บาท",
+                "value": "3k-7k"
+              },
+              {
+                "label": "7,000 – 15,000 บาท",
+                "value": "7k-15k"
+              },
+              {
+                "label": "มากกว่า 15,000 บาท",
+                "value": "gt15k"
+              }
+            ]
+          },
+          {
+            "type": "radio",
+            "key": "planningSource",
+            "label": "ท่านหาข้อมูลการท่องเที่ยวจากที่ใด?",
+            "input": true,
+            "values": [
+              {
+                "label": "Google / เว็บไซต์",
+                "value": "google"
+              },
+              {
+                "label": "Facebook / Instagram",
+                "value": "social"
+              },
+              {
+                "label": "YouTube / TikTok",
+                "value": "video"
+              },
+              {
+                "label": "บอกต่อจากเพื่อน/ครอบครัว",
+                "value": "wordofmouth"
+              },
+              {
+                "label": "บริษัททัวร์",
+                "value": "agency"
+              }
+            ]
+          },
+          {
+            "type": "textarea",
+            "key": "dreamDestination",
+            "label": "จุดหมายปลายทางในไทยที่อยากไปมากที่สุดและเหตุผล",
+            "rows": 3,
+            "input": true
+          },
+          {
+            "type": "button",
+            "key": "submit",
+            "label": "ส่งแบบสอบถาม",
+            "input": true,
+            "action": "submit"
+          }
+        ]
+      },
+      "createdAt": "2026-03-02T10:00:00.000Z",
+      "updatedAt": "2026-03-02T10:00:00.000Z"
+    },
+    {
+      "id": "f008",
+      "title": "แบบสอบถามพฤติกรรมการซื้อสินค้าออนไลน์",
+      "description": "ศึกษาพฤติกรรมและปัจจัยที่มีผลต่อการตัดสินใจซื้อสินค้าออนไลน์",
+      "schema": {
+        "display": "form",
+        "components": [
+          {
+            "type": "radio",
+            "key": "frequency",
+            "label": "ท่านซื้อสินค้าออนไลน์บ่อยแค่ไหน?",
+            "input": true,
+            "values": [
+              {
+                "label": "ทุกวัน",
+                "value": "daily"
+              },
+              {
+                "label": "หลายครั้งต่อสัปดาห์",
+                "value": "weekly"
+              },
+              {
+                "label": "เดือนละ 1 – 2 ครั้ง",
+                "value": "monthly"
+              },
+              {
+                "label": "นานๆ ครั้ง",
+                "value": "rarely"
+              }
+            ],
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "selectboxes",
+            "key": "platforms",
+            "label": "แพลตฟอร์มที่ใช้ซื้อสินค้า (เลือกได้หลายข้อ)",
+            "input": true,
+            "inputType": "checkbox",
+            "values": [
+              {
+                "label": "Shopee",
+                "value": "shopee"
+              },
+              {
+                "label": "Lazada",
+                "value": "lazada"
+              },
+              {
+                "label": "JD Central",
+                "value": "jd"
+              },
+              {
+                "label": "Facebook/Instagram Shop",
+                "value": "social"
+              },
+              {
+                "label": "TikTok Shop",
+                "value": "tiktok"
+              },
+              {
+                "label": "เว็บไซต์ของแบรนด์โดยตรง",
+                "value": "brand"
+              }
+            ]
+          },
+          {
+            "type": "radio",
+            "key": "avgSpend",
+            "label": "ยอดใช้จ่ายออนไลน์โดยเฉลี่ยต่อเดือน",
+            "input": true,
+            "values": [
+              {
+                "label": "น้อยกว่า 500 บาท",
+                "value": "lt500"
+              },
+              {
+                "label": "500 – 1,500 บาท",
+                "value": "500-1500"
+              },
+              {
+                "label": "1,500 – 5,000 บาท",
+                "value": "1500-5000"
+              },
+              {
+                "label": "5,000 บาทขึ้นไป",
+                "value": "gt5000"
+              }
+            ]
+          },
+          {
+            "type": "survey",
+            "key": "buyingFactors",
+            "label": "ปัจจัยที่มีผลต่อการตัดสินใจซื้อ",
+            "input": true,
+            "questions": [
+              {
+                "label": "ราคา / โปรโมชั่น",
+                "value": "price"
+              },
+              {
+                "label": "รีวิวจากผู้ซื้อ",
+                "value": "review"
+              },
+              {
+                "label": "ความน่าเชื่อถือของร้าน",
+                "value": "trust"
+              },
+              {
+                "label": "ความรวดเร็วในการจัดส่ง",
+                "value": "delivery"
+              },
+              {
+                "label": "นโยบายคืนสินค้า",
+                "value": "return"
+              }
+            ],
+            "values": [
+              {
+                "label": "สำคัญมากที่สุด",
+                "value": "5"
+              },
+              {
+                "label": "สำคัญมาก",
+                "value": "4"
+              },
+              {
+                "label": "ปานกลาง",
+                "value": "3"
+              },
+              {
+                "label": "สำคัญน้อย",
+                "value": "2"
+              },
+              {
+                "label": "ไม่สำคัญ",
+                "value": "1"
+              }
+            ]
+          },
+          {
+            "type": "radio",
+            "key": "paymentMethod",
+            "label": "ช่องทางชำระเงินที่ใช้บ่อยที่สุด",
+            "input": true,
+            "values": [
+              {
+                "label": "พร้อมเพย์ / โอนเงิน",
+                "value": "transfer"
+              },
+              {
+                "label": "บัตรเครดิต / เดบิต",
+                "value": "card"
+              },
+              {
+                "label": "เก็บเงินปลายทาง (COD)",
+                "value": "cod"
+              },
+              {
+                "label": "Rabbit LINE Pay / TrueMoney",
+                "value": "ewallet"
+              }
+            ]
+          },
+          {
+            "type": "textarea",
+            "key": "badExperience",
+            "label": "ประสบการณ์แย่ที่เคยพบจากการซื้อออนไลน์",
+            "rows": 3,
+            "input": true
+          },
+          {
+            "type": "button",
+            "key": "submit",
+            "label": "ส่งแบบสอบถาม",
+            "input": true,
+            "action": "submit"
+          }
+        ]
+      },
+      "createdAt": "2026-03-02T11:00:00.000Z",
+      "updatedAt": "2026-03-02T11:00:00.000Z"
+    },
+    {
+      "id": "f009",
+      "title": "แบบสอบถามความพึงพอใจอาหารและร้านอาหาร",
+      "description": "ประเมินความพึงพอใจและรับทราบความต้องการของลูกค้าเพื่อพัฒนาร้านอาหาร",
+      "schema": {
+        "display": "form",
+        "components": [
+          {
+            "type": "textfield",
+            "key": "visitorName",
+            "label": "ชื่อลูกค้า (ไม่บังคับ)",
+            "input": true
+          },
+          {
+            "type": "radio",
+            "key": "visitType",
+            "label": "การเข้าใช้บริการวันนี้",
+            "input": true,
+            "values": [
+              {
+                "label": "ทานที่ร้าน (Dine-in)",
+                "value": "dinein"
+              },
+              {
+                "label": "ซื้อกลับบ้าน (Take Away)",
+                "value": "takeaway"
+              },
+              {
+                "label": "สั่งผ่านแอป Delivery",
+                "value": "delivery"
+              }
+            ],
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "survey",
+            "key": "foodRating",
+            "label": "การประเมินคุณภาพอาหาร",
+            "input": true,
+            "questions": [
+              {
+                "label": "รสชาติอาหาร",
+                "value": "taste"
+              },
+              {
+                "label": "ความสะอาดและสุขอนามัย",
+                "value": "hygiene"
+              },
+              {
+                "label": "ปริมาณอาหารต่อราคา",
+                "value": "value"
+              },
+              {
+                "label": "ความรวดเร็วในการเสิร์ฟ",
+                "value": "speed"
+              },
+              {
+                "label": "บรรยากาศร้าน",
+                "value": "ambiance"
+              },
+              {
+                "label": "ความสุภาพของพนักงาน",
+                "value": "service"
+              }
+            ],
+            "values": [
+              {
+                "label": "⭐⭐⭐⭐⭐",
+                "value": "5"
+              },
+              {
+                "label": "⭐⭐⭐⭐",
+                "value": "4"
+              },
+              {
+                "label": "⭐⭐⭐",
+                "value": "3"
+              },
+              {
+                "label": "⭐⭐",
+                "value": "2"
+              },
+              {
+                "label": "⭐",
+                "value": "1"
+              }
+            ]
+          },
+          {
+            "type": "selectboxes",
+            "key": "favoriteMenu",
+            "label": "เมนูที่ชื่นชอบ (เลือกได้หลายข้อ)",
+            "input": true,
+            "inputType": "checkbox",
+            "values": [
+              {
+                "label": "อาหารไทย",
+                "value": "thai"
+              },
+              {
+                "label": "อาหารญี่ปุ่น",
+                "value": "japanese"
+              },
+              {
+                "label": "อาหารอิตาเลียน",
+                "value": "italian"
+              },
+              {
+                "label": "อาหารฟาสต์ฟู้ด",
+                "value": "fastfood"
+              },
+              {
+                "label": "สลัด / อาหารเพื่อสุขภาพ",
+                "value": "healthy"
+              },
+              {
+                "label": "อาหารมังสวิรัติ/วีแกน",
+                "value": "vegan"
+              }
+            ]
+          },
+          {
+            "type": "radio",
+            "key": "priceValue",
+            "label": "ราคาอาหารเหมาะสมกับคุณภาพ",
+            "input": true,
+            "values": [
+              {
+                "label": "คุ้มค่ามาก",
+                "value": "very_good"
+              },
+              {
+                "label": "คุ้มค่า",
+                "value": "good"
+              },
+              {
+                "label": "พอไปได้",
+                "value": "ok"
+              },
+              {
+                "label": "ไม่ค่อยคุ้ม",
+                "value": "poor"
+              }
+            ]
+          },
+          {
+            "type": "radio",
+            "key": "revisit",
+            "label": "จะกลับมาใช้บริการอีกหรือไม่?",
+            "input": true,
+            "values": [
+              {
+                "label": "แน่นอน",
+                "value": "yes"
+              },
+              {
+                "label": "น่าจะกลับมา",
+                "value": "maybe"
+              },
+              {
+                "label": "ไม่แน่ใจ",
+                "value": "unsure"
+              },
+              {
+                "label": "ไม่กลับมา",
+                "value": "no"
+              }
+            ]
+          },
+          {
+            "type": "textarea",
+            "key": "menuSuggestion",
+            "label": "เมนูที่อยากให้เพิ่ม / ข้อเสนอแนะ",
+            "rows": 3,
+            "input": true
+          },
+          {
+            "type": "button",
+            "key": "submit",
+            "label": "ส่งแบบประเมิน",
+            "input": true,
+            "action": "submit"
+          }
+        ]
+      },
+      "createdAt": "2026-03-03T08:00:00.000Z",
+      "updatedAt": "2026-03-03T08:00:00.000Z"
+    },
+    {
+      "id": "f010",
+      "title": "แบบสอบถามนักศึกษาใหม่",
+      "description": "รวบรวมข้อมูลและความคาดหวังของนักศึกษาใหม่เพื่อการดูแลและพัฒนาหลักสูตร",
+      "schema": {
+        "display": "form",
+        "components": [
+          {
+            "type": "textfield",
+            "key": "studentName",
+            "label": "ชื่อ-นามสกุล",
+            "input": true,
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "textfield",
+            "key": "studentId",
+            "label": "รหัสนักศึกษา",
+            "input": true,
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "select",
+            "key": "faculty",
+            "label": "คณะที่สังกัด",
+            "input": true,
+            "data": {
+              "values": [
+                {
+                  "label": "คณะวิศวกรรมศาสตร์",
+                  "value": "engineering"
+                },
+                {
+                  "label": "คณะวิทยาศาสตร์",
+                  "value": "science"
+                },
+                {
+                  "label": "คณะบริหารธุรกิจ",
+                  "value": "business"
+                },
+                {
+                  "label": "คณะนิติศาสตร์",
+                  "value": "law"
+                },
+                {
+                  "label": "คณะแพทยศาสตร์",
+                  "value": "medicine"
+                },
+                {
+                  "label": "คณะศิลปศาสตร์",
+                  "value": "arts"
+                },
+                {
+                  "label": "คณะสถาปัตยกรรมศาสตร์",
+                  "value": "architecture"
+                }
+              ]
+            },
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "type": "radio",
+            "key": "region",
+            "label": "ภูมิลำเนาของท่าน",
+            "input": true,
+            "values": [
+              {
+                "label": "กรุงเทพฯ และปริมณฑล",
+                "value": "bangkok"
+              },
+              {
+                "label": "ภาคกลาง",
+                "value": "central"
+              },
+              {
+                "label": "ภาคเหนือ",
+                "value": "north"
+              },
+              {
+                "label": "ภาคตะวันออกเฉียงเหนือ",
+                "value": "northeast"
+              },
+              {
+                "label": "ภาคตะวันออก",
+                "value": "east"
+              },
+              {
+                "label": "ภาคใต้",
+                "value": "south"
+              }
+            ]
+          },
+          {
+            "type": "radio",
+            "key": "enrollReason",
+            "label": "เหตุผลหลักในการเลือกมหาวิทยาลัยนี้",
+            "input": true,
+            "values": [
+              {
+                "label": "ชื่อเสียงของมหาวิทยาลัย",
+                "value": "reputation"
+              },
+              {
+                "label": "หลักสูตรที่ตรงความต้องการ",
+                "value": "curriculum"
+              },
+              {
+                "label": "ทำเลที่ตั้ง / ใกล้บ้าน",
+                "value": "location"
+              },
+              {
+                "label": "แนะนำจากครอบครัว/เพื่อน",
+                "value": "recommendation"
+              },
+              {
+                "label": "ค่าเล่าเรียนเหมาะสม",
+                "value": "cost"
+              }
+            ]
+          },
+          {
+            "type": "selectboxes",
+            "key": "expectations",
+            "label": "ความคาดหวังจากการเรียนในมหาวิทยาลัย (เลือกได้หลายข้อ)",
+            "input": true,
+            "inputType": "checkbox",
+            "values": [
+              {
+                "label": "ได้ความรู้และทักษะวิชาชีพ",
+                "value": "skills"
+              },
+              {
+                "label": "เครือข่ายเพื่อน/คอนเนกชั่น",
+                "value": "network"
+              },
+              {
+                "label": "ประสบการณ์นอกห้องเรียน",
+                "value": "experience"
+              },
+              {
+                "label": "การได้งานทำที่ดีหลังเรียนจบ",
+                "value": "career"
+              },
+              {
+                "label": "การพัฒนาตนเองและความเป็นผู้นำ",
+                "value": "leadership"
+              }
+            ]
+          },
+          {
+            "type": "radio",
+            "key": "campusLife",
+            "label": "ความกังวลเกี่ยวกับชีวิตในมหาวิทยาลัย",
+            "input": true,
+            "values": [
+              {
+                "label": "การปรับตัวกับเพื่อนใหม่",
+                "value": "social"
+              },
+              {
+                "label": "ค่าใช้จ่าย",
+                "value": "finance"
+              },
+              {
+                "label": "ความยากของการเรียน",
+                "value": "academic"
+              },
+              {
+                "label": "ที่พักอาศัย",
+                "value": "accommodation"
+              },
+              {
+                "label": "ไม่มีความกังวล",
+                "value": "none"
+              }
+            ]
+          },
+          {
+            "type": "textarea",
+            "key": "message",
+            "label": "สิ่งที่อยากบอกกับมหาวิทยาลัย / ความต้องการเพิ่มเติม",
+            "rows": 4,
+            "input": true
+          },
+          {
+            "type": "button",
+            "key": "submit",
+            "label": "ส่งแบบสอบถาม",
+            "input": true,
+            "action": "submit"
+          }
+        ]
+      },
+      "createdAt": "2026-03-03T09:00:00.000Z",
+      "updatedAt": "2026-03-03T09:00:00.000Z"
+    }
+  ],
+  "responses": [
+    {
+      "id": "62a7f88c-f9c7-4f28-975f-360437aa3187",
+      "formId": "f010",
+      "data": {
+        "studentName": "อดิศัย พรมลี้",
+        "studentId": "1111111",
+        "faculty": "medicine",
+        "region": "bangkok",
+        "enrollReason": "reputation",
+        "expectations": {
+          "skills": true,
+          "network": false,
+          "experience": false,
+          "career": false,
+          "leadership": false
+        },
+        "campusLife": "social",
+        "message": "TEST",
+        "submit": true
+      },
+      "submittedAt": "2026-03-05T04:01:35.548Z"
+    }
+  ]
+}
